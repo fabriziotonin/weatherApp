@@ -50,12 +50,14 @@ const datos = [
   },
 ]
 
+// traigo el id con los paramesquery y devuelvo el que coincide como si fuer un metodo findOne de mongoose
 exports.datos = (req, res) => {
   let id = req.query.id
   const country = datos.find((item)=>{
   return item.id == id
   }) 
   if(country){
+    // mando la respuesta 
       res.send(country)
   }else{
     res.json({ mensaje: "El pais no existe"})

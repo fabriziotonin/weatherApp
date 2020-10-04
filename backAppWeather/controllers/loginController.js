@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { validationResult } = require('express-validator');
+// usuarios harcodeados para evitar usar un server 
 const users = [{
   usuario: "fabrizio",
   password: "pass12345"
@@ -24,6 +25,7 @@ exports.login = (req, res) => {
     const payload = {
       check:  true
     };
+     // Firma del token con la clase secreta que esta en el .env 
     const token = jwt.sign(payload,process.env.MI_LLAVE, {
       expiresIn: "180d"
     });
