@@ -11,91 +11,90 @@ Mira **Deployment BACK** para conocer como desplegar el proyecto de la parte del
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Descargar las dos carpetas y completar los pasos de instalacion FrontEnd y Backend_
 
-```
+
 nodejs
 consola para comandos
-```
+
 
 ### Instalación FrontEnd 🔧
 
-
-
-_Dí cómo será ese paso_
+_ Clonar el repositorio o descargarlo_
 
 ```
-_ Clonar el repositorio o descargarlo
+$ git clone https://github.com/fabriziotonin/weatherApp.git
 ```
 
-_Y repite_
+_Abrir la carpeta frontAppWeather con la consola_
 
 ```
-hasta finalizar
+Abrir la consola en la carpeta raiz
 ```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
+_Ejecutar NPM Install para instalar las dependencias necesesarias_
 
 ```
-Da un ejemplo
+$ npm i
 ```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
+_Ejecutar el servidor del front_
 
 ```
-Da un ejemplo
+$ npm run start
 ```
 
-## Despliegue 📦
+_Finalizada la preparacion_
+_ Hay 3 usuarios creados para inciar sesion puedes elegir uno de estos para ingresar
 
-_Agrega notas adicionales sobre como hacer deploy_
+```
+{
+  usuario: "fabrizio",
+  password: "pass12345"
+},{
+  usuario: "marco",
+  password: "pass0987"
+},{
+  usuario: "maria",
+  password: "pass12345"
+}
+```
+_Selecciona una ciudad y ve la magia :)
+
+### Instalación BackEnd 🔧
+
+_ Clonar el repositorio o descargarlo si no lo descargaste en el paso anterior_
+
+```
+$ git clone https://github.com/fabriziotonin/weatherApp.git
+```
+
+_Abrir la carpeta backweather en la consola_
+
+```
+Abrir la consola en la carpeta raiz
+```
+_Ejecutar NPM Install para instalar las dependencias necesesarias_
+
+```
+$ npm i
+```
+_Ejecutar el servidor del back
+
+```
+$ npm run dev
+```
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+_Front
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+* [NodeJs] (https://nodejs.org/es/)
+* [React] (https://es.reactjs.org/)
+* [React Boostrap] (https://react-bootstrap.github.io/)
+* [Axio] (https://www.npmjs.com/package/axios)
 
-## Contribuyendo 🖇️
+_Back
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+* [NodeJs] (https://nodejs.org/es/)
+* [ExpressJS] (https://expressjs.com/es/)
+* [JsonWebToken] (https://jwt.io/)
 
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
