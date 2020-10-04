@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const { validationResult } = require('express-validator');
 const users = [{
   usuario: "fabrizio",
   password: "pass12345"
@@ -9,13 +10,16 @@ const users = [{
   usuario: "maria",
   password: "pass12345"
 }]
-
-
 exports.login = (req, res) => {
+
+  // busco un usuario en mi array con mongoose seria igual a findOne 
   let exist = users.find((item)=>{
-      return (item.usuario || item.password) == (req.body.usuario || req.body.password)
+    if(req.body.usuario == item.usuario && req.body.password == item.password){
+      return item.usuario == req.body.usuario
+    }
   })
   console.log(exist)
+  // creo la isntancia con la firma de jwt para crear el token con el usuario encontrado 
   if(exist) {
     const payload = {
       check:  true
@@ -29,6 +33,8 @@ exports.login = (req, res) => {
     usuario: exist.usuario
   });
   } else {
-      res.json({ mensaje: "Usuario o contraseña incorrectos"})
+      // traigo los errores del control de rutas y lo mando en el error 
+  const errores = validationResult(req);
+    return json({ errors: errores.array() });
   }
 }

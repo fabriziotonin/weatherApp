@@ -7,8 +7,11 @@ export default function Login({ setLoginData,loginData,login }) {
   //a traves del boton paso los parametros a la ruta login para validar el ingreso 
   const handleLogIn = (event) => {
     event.preventDefault()
-    login(loginData, setLoginData);
-    console.log(loginData.mensaje)
+    if(!loginData.usuario || !loginData.password){
+      alert("complete los datos")
+    }else{
+      login(loginData, setLoginData);
+    }
   }
 
   // traigo el valor de los inputs, con el spred mantengo los valores para poder escribir  y los seteo en el estado de login 
