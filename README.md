@@ -98,3 +98,4 @@ _Back
 * [NodeJs] (https://nodejs.org/es/)
 * [ExpressJS] (https://expressjs.com/es/)
 * [JsonWebToken] (https://jwt.io/)
+* [ExpressValidator] (https://express-validator.com/)
