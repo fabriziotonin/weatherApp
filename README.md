@@ -82,7 +82,8 @@ _Ejecutar el servidor del back
 ```
 $ npm run dev
 ```
-
+## Deploy 📦
+Actualmente no esta deployado en ningun servicio por falta de tiempo pero posiblemente en el futuro se lo actualice y se lo deploye usando mongoDB para la base de datos, mongoose para manejar la info y los esquemas desde el backend y utilizar el servicio de heroku para guardar los datos en un servidor
 ## Construido con 🛠️
 
 _Front
