@@ -5,8 +5,7 @@
 /backAppWeather/.pnp
 /backAppWeather/.pnp.js
 /frontAppWeather/node_modules
-/frontAppWeather/.pnp
-/frontAppWeather/.pnp.js
+
 
 # testing
 /coverage
