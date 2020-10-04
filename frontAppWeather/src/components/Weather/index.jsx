@@ -45,7 +45,7 @@ export default function Weather({ setClima,clima ,weather }) {
               <div>
                 <Row>
                   <Col>{clima.day}</Col>
-                  <Col>Icono</Col>
+                  <Col><img src={clima.icon}/></Col>
                 </Row>
               </div>
               <div>
