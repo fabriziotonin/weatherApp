@@ -5,10 +5,10 @@ import login from './services/routeLogIn';
 import weather from './services/routeWeather';
 
 export default function App() {
-  const [clima, setClima] = useState({id: 1});
+  const [clima, setClima] = useState({id: 1,content:true});
   const [loginData, setLoginData] = useState(JSON.parse(localStorage.getItem('token')) || []);
   
-
+// renderizo el componente cuando cambio el clima en el select de componente weather 
   useEffect(() => {
   }, [clima])
   

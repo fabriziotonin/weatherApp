@@ -13,8 +13,9 @@ const users = [{
 
 exports.login = (req, res) => {
   let exist = users.find((item)=>{
-      return (item.usuario && item.password) == (req.body.usuario && req.body.password)
+      return (item.usuario || item.password) == (req.body.usuario || req.body.password)
   })
+  console.log(exist)
   if(exist) {
     const payload = {
       check:  true

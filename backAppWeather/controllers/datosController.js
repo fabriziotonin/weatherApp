@@ -6,7 +6,7 @@ const datos = [
       temp: 35,
       max_temp: 40,
       min_temp: 28,
-      day: "Nublado",
+      day: "nublado",
       humedity: 78,
       longitud: -26.82102327577041,
       latitud: -65.21110785723238
@@ -17,7 +17,7 @@ const datos = [
       temp: 27,
       max_temp: 33,
       min_temp: 23,
-      day: "Parcialmente Nublado",
+      day: "soleado",
       humedity: 58,
       longitud: -34.649572601989725,
       latitud:-58.400458018546445
@@ -39,7 +39,7 @@ const datos = [
       temp: 12,
       max_temp: 19,
       min_temp: 11,
-      day: "Lluvia",
+      day: "lluvia",
       humedity: 80,
       longitud: 51.45357145756672,
       latitud: -0.13227178074411539

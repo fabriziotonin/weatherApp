@@ -1,13 +1,22 @@
 import React from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
-export default function Login({ setLoginData, login }) {
+export default function Login({ setLoginData,loginData,login }) {
 
-  // paso los parametros a la ruta login para validar el ingreso 
+
+  //a traves del boton paso los parametros a la ruta login para validar el ingreso 
   const handleLogIn = (event) => {
     event.preventDefault()
-    login("fabrizio", "pass12345", setLoginData);
-    console.log("asd")
+    login(loginData, setLoginData);
+    console.log(loginData.mensaje)
+  }
+
+  // traigo el valor de los inputs, con el spred mantengo los valores para poder escribir  y los seteo en el estado de login 
+  const handleChange = (event) => {
+    setLoginData({
+      ...loginData,
+      [event.target.name]: event.target.value.toLowerCase()
+    })
   }
 
   return (
@@ -17,16 +26,25 @@ export default function Login({ setLoginData, login }) {
           <Form onSubmit={(event) => handleLogIn(event)}>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Usuario</Form.Label>
-              <Form.Control type="text" placeholder="Usuario" />
+              <Form.Control
+                type="text"
+                placeholder="Usuario"
+                name="usuario"
+                onChange={handleChange}
+              />
             </Form.Group>
-
             <Form.Group controlId="password">
               <Form.Label>Contraseña</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                name="password"
+                onChange={handleChange}
+              />
             </Form.Group>
             <Button variant="primary" type="submit">
               Submit
-       </Button>
+            </Button>
           </Form>
         </Col>
       </Row>

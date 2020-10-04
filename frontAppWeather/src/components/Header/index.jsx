@@ -3,14 +3,14 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import './Header.css';
 const Header = ({ loginData, setLoginData }) => {
 
+  // Limpio el state y el local storage para deslogear al usuario y cerrar sesion 
   const handleLogOut = () => {
-    console.log("sup")
     setLoginData([])
     localStorage.removeItem('token')
   }
 
 
-
+  console.log(loginData.usuario)
   return (
     <Container fluid>
       <Row className="text-center background">

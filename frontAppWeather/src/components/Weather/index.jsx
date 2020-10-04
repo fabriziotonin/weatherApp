@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Col, Container, Row, Card, Form, Button } from 'react-bootstrap';
 import './Weather.css';
 
 export default function Weather({ setClima,clima ,weather }) {
   // Mando los parametros a la ruta con el id y la autenticacion
-useEffect(() => {
-  handleSearch()
-}, [])
-  
+
   const handleSearch = () => {
     weather(setClima, parseInt(clima.id))
     }
@@ -19,12 +16,12 @@ useEffect(() => {
       });
   }
   return (
-    <Container fluid className="mt-5 ">
-      <Row className="my-4 justify-content-center">
-
+    <Container fluid>
+      <Row className="py-4 justify-content-center">
+        {/* aqui coloco las ciudades con su identificador para poder traerlo desde el back, si fueran mas haria un map con el array de ciudades para no escribirlos todos */}
         <Col xs="4">
           <Form.Group controlId="exampleForm.ControlSelect1">
-            <Form.Label>Example select</Form.Label>
+            <Form.Label>Elige una ciudad</Form.Label>
             <Form.Control name="id" onChange={handleChange} as="select" defaultValue={clima.id}>
               <option value="1">Tucuman</option>
               <option value="2">Buenos Aires</option>
@@ -38,7 +35,9 @@ useEffect(() => {
         </Col>
 
       </Row>
-      <Row className="justify-content-center">
+      {
+        !clima.content?
+        ( <Row className="justify-content-center">
         <Col className="align-self-center" xs="10" md="7">
           <Card>
             <Card.Header as="h5">{clima.country}  {clima.province}</Card.Header>
@@ -74,7 +73,11 @@ useEffect(() => {
 
           <iframe title="Weather map" className="iframe" src={`https://maps.google.com/?ll=${clima.longitud},${clima.latitud}&z=11&t=m&output=embed`} height="400" frameBorder="0" style={{ border: 0, width: "100%" }} allowFullScreen></iframe>
         </Col>
-      </Row>
+      </Row>)
+        :
+        (<div></div>)
+      }
+     
     </Container>
   )
 }
